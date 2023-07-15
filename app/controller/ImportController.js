@@ -45,10 +45,10 @@ class ImportController {
         }
       }
   
-      res.status(200).send('Importação concluída com sucesso!');
+      res.status(200).json({message:'Importação concluída com sucesso!'});
     } catch (error) {
       console.error('Erro na importação do CSV:', error);
-      res.status(500).send('Erro na importação do CSV');
+      res.status(500).json({message:'Erro na importação do CSV'});
     }
 
   }
